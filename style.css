@@ -1,0 +1,159 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+}
+
+body{
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  height: 100vh;
+  /* position: relative; */
+}
+
+/**********************************************
+*** TOP
+**********************************************/
+
+.top {
+    height: 50vh;
+    background-image: url('budget.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.budget {
+    font-size: 14px;
+    padding: 4px;
+    width: 50vw;
+    position: absolute;
+    left: 3vw;
+    top: 9vh;
+}
+
+.budget_income, .budget_expenses {
+  width: 40vw;
+  padding: 3px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.budget_income {
+  background: #28B9B5;
+}
+
+.budget_expenses {
+  background: #FF5049;
+}
+
+
+/**********************************************
+*** BOTTOM
+**********************************************/
+.add {
+  height: 10vh;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+  padding-top: 15px;
+  margin: 0 auto;
+}
+
+.add_container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.select_options {
+  padding: 6px;
+  border: 1px solid green;
+  margin: 0 12px 0 20px;
+  border-radius: 0.3em;
+  float: left;
+
+}
+
+input[type='text']{
+  border: 1px solid orange;
+  border-radius: 0.3em;
+  text-align: center;
+  float: left;
+  margin-right: 12px
+}
+
+.add_description {
+  width: 40%;
+}
+
+.add_value {
+  width: 20%;
+}
+
+button {
+  border: none;
+  background: none;
+  margin: 0;
+}
+
+ion-icon {
+  font-size: 28px;
+  color: green;
+  padding-top: 2px;
+  background: none;
+  border: none;
+}
+
+.incomes, .expenses {
+  margin: 20px 5% 0 5% ;
+  width: 40%;
+  text-transform: uppercase;
+  float: left;
+  text-align: center;
+}
+
+.incomes h2 {
+  color: #28B9B5;
+}
+
+.expenses h2 {
+  color: #FF5049;
+}
+
+/**********************************************
+*** MEDIA QUERIES
+**********************************************/
+
+@media only screen and (min-width: 501px){
+  .select_options {
+    margin-left: 14%;
+  }
+
+}
+
+@media only screen and (min-width: 1250px){
+  .top {
+    position: relative;
+  }
+
+  .budget {
+    position: aboslute;
+    left: 6.7vw;
+    top: 9vh;
+  }
+
+  .budget_income, .budget_expenses {
+    width: 35vw;
+  }
+
+  .select_options {
+    margin-left: 15%;
+  }
+
+}
