@@ -15,14 +15,13 @@
           <h2>Available Budget in <span class = 'budget_title_month'>%Month%</span></h2>
         </div>
 
-        <div class="budget_value"></div>
+        <div class="budget_value">0.00</div>
 
         <!-- INCOME DETAILS -->
         <div class="budget_income">
           <div class="budget_income_text">Income</div>
           <div class="budget_income_amount">
               <div class="budget_income_value"></div>
-              <div class="budget_income_percentage"></div>
           </div>
         </div>
 
@@ -44,8 +43,8 @@
       <div class="add">
         <div class="add_container">
           <select class="select_options" name="options">
-            <option value="Income">Inc (+)</option>
-            <option value="Expense">Exp (-)</option>
+            <option value="incomes">Inc (+)</option>
+            <option value="expenses">Exp (-)</option>
           </select>
           <input type="text" class="add_description" placeholder = 'Add Description' />
           <input type="text" class="add_value" placeholder="Value" />
@@ -56,16 +55,47 @@
       </div>
 
 
+      <!-- LIST ITEMS BASED ON TYPE -->
       <div class="incomes">
         <h2>Incomes</h2>
-      </div>
+
+        <div class="incomes_list">
+          <!-- <div class="income_item" id = "income-id">
+            <div class="income_item_description">Description</div>
+
+            <div class="right">
+              <div class="income_item_value">+ Value</div>
+                <div class="income_item_delete clearfix">
+                  <button type="button" class='btn_delete' name="button">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                  </button>
+                </div>
+            </div> -->
+          </div>
+        </div>
 
       <div class="expenses">
         <h2>expenses</h2>
+
+        <div class="expenses_list">
+          <!-- <div class="expense_item" id = "expense-id">
+            <div class="expense_item_description">Description</div>
+
+            <div class="right">
+              <div class="expense_item_value">- Value</div>
+                <div class="expense_item_percentage">0 %</div>
+                <div class="expense_item_delete clearfix">
+                  <button type="button" class='btn_delete' name="button">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                  </button>
+                </div>
+            </div>
+          </div> -->
+        </div>
       </div>
 
     </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script type="text/javascript" src= 'app.js'></script>
   </body>
 </html>

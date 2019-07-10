@@ -14,7 +14,14 @@ body{
   font-weight: 400;
   color: #555;
   height: 100vh;
-  /* position: relative; */
+  position: relative;
+  overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /**********************************************
@@ -38,16 +45,53 @@ body{
     top: 9vh;
 }
 
-.budget_income, .budget_expenses {
-  width: 40vw;
-  padding: 3px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  color: #fff;
+.budget_value {
+  text-align: center;
+  font-size: 3em;
+  padding-right: 20%;
+  margin: 5% 0;
 }
 
+.budget_income, .budget_expenses {
+  width: 40vw;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  height: 30px;
+
+}
+
+.budget_income_text, .budget_expenses_text {
+  width: 50%;
+  float: left;
+}
 .budget_income {
+  margin-top: 5%;
   background: #28B9B5;
+}
+
+.budget_income_amount, .budget_expenses_amount{
+  width: 15%;
+  text-align: right;
+  padding-right: 2%;
+  float: right;
+}
+
+.budget_expenses_amount {
+  width: 40%;
+}
+
+.budget_expenses_value {
+  float: left;
+  margin-left: 20px;
+}
+
+.budget_expenses_percentage {
+ float: right;
+ background: rgba(255, 255, 255, 0.2);
+ border-radius: 0.3em;
 }
 
 .budget_expenses {
@@ -58,12 +102,17 @@ body{
 /**********************************************
 *** BOTTOM
 **********************************************/
+.bottom {
+  overflow: auto;
+}
+
 .add {
-  height: 10vh;
   background: #f7f7f7;
   border-bottom: 1px solid #e7e7e7;
-  padding-top: 15px;
+  padding-top: 18px;
+  padding-bottom: 19px;
   margin: 0 auto;
+  vertical-align: middle;
 }
 
 .add_container {
@@ -116,6 +165,7 @@ ion-icon {
   text-transform: uppercase;
   float: left;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .incomes h2 {
@@ -124,6 +174,36 @@ ion-icon {
 
 .expenses h2 {
   color: #FF5049;
+}
+
+.income_item_description, .expense_item_description{
+    float: left;
+    padding: 5px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.right{
+  float: right;
+
+}
+
+
+.income_item_value, .expense_item_value, .expense_item_percentage{
+  float: left;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.expense_item_percentage{
+  color: #FF5049;
+  background: #FFDAD9;
+  border-radius: 0.3em;
+  margin: 0 5px;
+}
+
+.income_item_delete, .expense_item_delete{
+  float: right;
 }
 
 /**********************************************
@@ -135,6 +215,9 @@ ion-icon {
     margin-left: 14%;
   }
 
+  .budget_expenses_amount {
+    width: 30%;
+  }
 }
 
 @media only screen and (min-width: 1250px){
@@ -146,6 +229,10 @@ ion-icon {
     position: aboslute;
     left: 6.7vw;
     top: 9vh;
+  }
+
+  .budget_expenses_amount {
+    width: 20%;
   }
 
   .budget_income, .budget_expenses {
