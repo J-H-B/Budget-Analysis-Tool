@@ -46,10 +46,10 @@ body{
 }
 
 .budget_value {
+  width: 90%;
   text-align: center;
-  font-size: 3em;
-  padding-right: 20%;
-  margin: 5% 0;
+  font-size: 2.5em;
+  margin: 10% auto;
 }
 
 .budget_income, .budget_expenses {
@@ -73,23 +73,24 @@ body{
 }
 
 .budget_income_amount, .budget_expenses_amount{
-  width: 15%;
-  text-align: right;
   padding-right: 2%;
   float: right;
 }
 
 .budget_expenses_amount {
-  width: 40%;
+  width: 50%;
 }
 
 .budget_expenses_value {
   float: left;
-  margin-left: 20px;
+  margin-right: 2%;
 }
 
 .budget_expenses_percentage {
+ font-size: 14px;
+ text-align: right;
  float: right;
+ margin-left: 1%;
  background: rgba(255, 255, 255, 0.2);
  border-radius: 0.3em;
 }
@@ -188,7 +189,6 @@ ion-icon {
 
 }
 
-
 .income_item_value, .expense_item_value, .expense_item_percentage{
   float: left;
   padding: 5px;
@@ -214,9 +214,17 @@ ion-icon {
   .select_options {
     margin-left: 14%;
   }
+}
 
+@media only screen and (min-width: 601px){
   .budget_expenses_amount {
-    width: 30%;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 701px){
+  .budget_expenses_amount {
+    width: 35%;
   }
 }
 
@@ -231,8 +239,13 @@ ion-icon {
     top: 9vh;
   }
 
+  .budget_value {
+    margin: 5% auto;
+    padding-right: 20%;
+  }
+
   .budget_expenses_amount {
-    width: 20%;
+    width: 25%;
   }
 
   .budget_income, .budget_expenses {
